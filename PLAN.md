@@ -120,7 +120,7 @@ Read AGENTS.md. Implement cmd/fetch/main.go that:
    to persist the rotated token
 4. Calls GET /athlete/activities?after={LastActivityEpoch}&per_page=100,
    paginating while len(results) == 100
-5. Filters activities where workout_type == 1 (races only)
+5. Filters activities where workout_type == 1 and sport_type == "Run" (running races only)
 6. Maps each matching activity to a store.Race, pulling summary_polyline
    from map.summary_polyline in the API response
 7. Loads existing data/races.json, deduplicates by activity ID, appends new races
