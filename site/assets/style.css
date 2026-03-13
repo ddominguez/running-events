@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+:root {
+	--bg: #333;
+	--text: #eee;
+	--text-dim: #aaa;
+	--accent: #fc4c02;
+	--link: var(--accent);
+	--font: 'JetBrains Mono', system-ui, Arial, sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: var(--bg);
+	color: var(--text);
+	font-family: var(--font);
+	line-height: 1.6;
+	padding: 2rem;
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+a {
+	color: var(--link);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+header {
+	margin-bottom: 2rem;
+	padding-bottom: 1rem;
+	border-bottom: 1px solid var(--text-dim);
+}
+
+h1 {
+	font-size: 1.5rem;
+	font-weight: 700;
+	margin-bottom: 0.5rem;
+}
+
+h2 {
+	font-size: 1.25rem;
+	font-weight: 700;
+	margin: 2rem 0 1rem;
+	color: var(--text-dim);
+}
+
+.year-header {
+	font-size: 1.25rem;
+	font-weight: 700;
+	margin: 2rem 0 1rem;
+	padding-bottom: 0.5rem;
+	border-bottom: 1px solid var(--text-dim);
+}
+
+.race-list {
+	list-style: none;
+}
+
+.race-item {
+	padding: 0.75rem 0;
+	border-bottom: 1px solid #444;
+}
+
+.race-item:last-child {
+	border-bottom: none;
+}
+
+.race-name {
+	font-weight: 700;
+	font-size: 1rem;
+}
+
+.race-date {
+	color: var(--text-dim);
+	font-size: 0.875rem;
+}
+
+.race-distance {
+	color: var(--text-dim);
+	font-size: 0.875rem;
+}
+
+.back-link {
+	display: inline-block;
+	margin-bottom: 1rem;
+	color: var(--text-dim);
+}
+
+.detail-header {
+	margin-bottom: 2rem;
+}
+
+.detail-title {
+	font-size: 1.5rem;
+	font-weight: 700;
+	margin-bottom: 0.5rem;
+}
+
+.detail-date {
+	color: var(--text-dim);
+	font-size: 1rem;
+}
+
+.stats {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 1rem;
+	margin: 2rem 0;
+}
+
+.stat {
+	background: #444;
+	padding: 1rem;
+	border-radius: 4px;
+}
+
+.stat-label {
+	display: block;
+	color: var(--text-dim);
+	font-size: 0.75rem;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	margin-bottom: 0.25rem;
+}
+
+.stat-value {
+	font-size: 1.25rem;
+	font-weight: 700;
+}
+
+.map {
+	margin-top: 2rem;
+}
+
+.map img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 4px;
+}
+
+.no-races {
+	color: var(--text-dim);
+	font-style: italic;
+}

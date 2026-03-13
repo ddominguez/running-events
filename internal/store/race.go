@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
-	"sort"
+	"slices"
 )
 
 type Race struct {
@@ -47,8 +47,14 @@ func LoadRaces(path string) ([]Race, error) {
 }
 
 func SaveRaces(path string, races []Race) error {
-	sort.Slice(races, func(i, j int) bool {
-		return races[i].StartDate > races[j].StartDate
+	slices.SortFunc(races, func(a, b Race) int {
+		if a.StartDate > b.StartDate {
+			return -1
+		}
+		if a.StartDate < b.StartDate {
+			return 1
+		}
+		return 0
 	})
 
 	data, err := json.MarshalIndent(races, "", "  ")
