@@ -79,7 +79,7 @@ func main() {
 				ID:                 a.ID,
 				Name:               a.Name,
 				StartDate:          a.StartDate,
-				Distance:           a.Distance,
+				Distance:           int(a.Distance),
 				MovingTime:         a.MovingTime,
 				ElapsedTime:        a.ElapsedTime,
 				TotalElevationGain: a.TotalElevationGain,

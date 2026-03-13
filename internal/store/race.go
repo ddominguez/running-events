@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
+	"path/filepath"
 	"slices"
 )
 
@@ -62,7 +63,7 @@ func SaveRaces(path string, races []Race) error {
 		return fmt.Errorf("encoding races: %w", err)
 	}
 
-	tmpFile, err := os.CreateTemp("", "races-*.json")
+	tmpFile, err := os.CreateTemp(filepath.Dir(path), "races-*.json")
 	if err != nil {
 		return fmt.Errorf("creating temp file: %w", err)
 	}
@@ -107,7 +108,7 @@ func SaveSync(path string, state SyncState) error {
 		return fmt.Errorf("encoding sync: %w", err)
 	}
 
-	tmpFile, err := os.CreateTemp("", "sync-*.json")
+	tmpFile, err := os.CreateTemp(filepath.Dir(path), "sync-*.json")
 	if err != nil {
 		return fmt.Errorf("creating temp file: %w", err)
 	}

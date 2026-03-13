@@ -10,6 +10,10 @@ import (
 )
 
 func TestRefreshToken_MissingEnvVars(t *testing.T) {
+	os.Unsetenv("STRAVA_CLIENT_ID")
+	os.Unsetenv("STRAVA_CLIENT_SECRET")
+	os.Unsetenv("STRAVA_REFRESH_TOKEN")
+
 	tests := []struct {
 		name    string
 		envVars map[string]string
@@ -34,9 +38,10 @@ func TestRefreshToken_MissingEnvVars(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			for k := range tt.envVars {
-				os.Unsetenv(k)
-			}
+			os.Unsetenv("STRAVA_CLIENT_ID")
+			os.Unsetenv("STRAVA_CLIENT_SECRET")
+			os.Unsetenv("STRAVA_REFRESH_TOKEN")
+
 			for k, v := range tt.envVars {
 				os.Setenv(k, v)
 			}

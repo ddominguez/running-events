@@ -4,7 +4,7 @@ type Activity struct {
 	ID                 int64   `json:"id"`
 	Name               string  `json:"name"`
 	StartDate          string  `json:"start_date"`
-	Distance           int     `json:"distance"`
+	Distance           float64 `json:"distance"`
 	MovingTime         int     `json:"moving_time"`
 	ElapsedTime        int     `json:"elapsed_time"`
 	TotalElevationGain float64 `json:"total_elevation_gain"`
