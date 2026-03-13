@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
 
 :root {
-	--bg: #333;
+	--bg: #111;
 	--text: #eee;
 	--text-dim: #aaa;
 	--accent: #fc4c02;
@@ -54,7 +54,7 @@ h2 {
 }
 
 .year-header {
-	font-size: 1.25rem;
+	font-size: 1.5rem;
 	font-weight: 700;
 	margin: 2rem 0 1rem;
 	padding-bottom: 0.5rem;
@@ -76,17 +76,17 @@ h2 {
 
 .race-name {
 	font-weight: 700;
-	font-size: 1rem;
+	font-size: 1.125rem;
 }
 
 .race-date {
 	color: var(--text-dim);
-	font-size: 0.875rem;
+	font-size: 1rem;
 }
 
 .race-distance {
 	color: var(--text-dim);
-	font-size: 0.875rem;
+	font-size: 1rem;
 }
 
 .back-link {
