@@ -156,8 +156,8 @@ func toRaceData(r store.Race) RaceData {
 		Slug:               Slug(r.Name),
 		FormattedDate:      FormatDate(r.StartDate),
 		FormattedDistance:  FormatDistance(r.Distance),
-		FormattedDuration:  FormatDuration(r.MovingTime),
-		FormattedPace:      FormatPace(r.Distance, r.MovingTime),
+		FormattedDuration:  FormatDuration(r.ElapsedTime),
+		FormattedPace:      FormatPace(r.Distance, r.ElapsedTime),
 		FormattedElevation: FormatElevation(r.TotalElevationGain),
 		HasMap:             r.SummaryPolyline != "",
 	}

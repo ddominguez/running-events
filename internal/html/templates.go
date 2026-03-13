@@ -57,7 +57,7 @@ var DetailTemplate = `<!DOCTYPE html>
 				<span class="stat-value">{{.Race.FormattedDistance}}</span>
 			</div>
 			<div class="stat">
-				<span class="stat-label">Time</span>
+				<span class="stat-label">Elapsed Time</span>
 				<span class="stat-value">{{.Race.FormattedDuration}}</span>
 			</div>
 			<div class="stat">
