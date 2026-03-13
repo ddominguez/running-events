@@ -7,7 +7,7 @@ A static site generator that fetches running race activities from the Strava API
 ## Tech Stack
 
 - **Language**: Go
-- **Hosting**: GitHub Pages (project site at `https://{username}.github.io/{repo-name}/`)
+- **Hosting**: GitHub Pages (project site at `https://ddominguez.github.io/running-events/`)
 - **CI/CD**: GitHub Actions
 - **External APIs**: Strava v3 REST API, Mapbox Static Images API
 - **State**: JSON files committed to the repo
